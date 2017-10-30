@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_pdfkit_pdfthumbnailview_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBu-OQ-n0O" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="640"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdg-zC-D4P" customClass="PDFThumbnailView">
+                                <rect key="frame" x="0.0" y="640" width="1024" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="mEx-kL-1rE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cBu-OQ-n0O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3G7-GF-0Va"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vdg-zC-D4P" secondAttribute="trailing" id="Iv1-ZH-Qwy"/>
+                            <constraint firstItem="Vdg-zC-D4P" firstAttribute="top" secondItem="cBu-OQ-n0O" secondAttribute="bottom" id="Oyb-Nf-OM0"/>
+                            <constraint firstItem="Vdg-zC-D4P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SKg-6Z-49h"/>
+                            <constraint firstItem="cBu-OQ-n0O" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aYg-0R-xTE"/>
+                            <constraint firstItem="Vdg-zC-D4P" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ilq-Iy-zBB"/>
+                            <constraint firstItem="cBu-OQ-n0O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nwp-Y9-kzx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pdfThumbnailView" destination="Vdg-zC-D4P" id="Dfv-LM-GRh"/>
+                        <outlet property="pdfView" destination="cBu-OQ-n0O" id="Gyc-Bc-Okv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.6953125" y="132.8125"/>
+        </scene>
+    </scenes>
+</document>
