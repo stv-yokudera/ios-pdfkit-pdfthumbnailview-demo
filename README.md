@@ -4,6 +4,8 @@
 PDFThumbnailViewは、PDFのサムネイルを表示するクラスです。
 Interface Builderを使用して生成可能です。
 
+![demo_image](https://github.com/stv-yokudera/ios-pdfkit-pdfthumbnailview-demo/blob/images/pdf_thumbnail_view.png)
+
 ## 関連クラス
 PDFView
 PDFDocument
